@@ -20,5 +20,10 @@
     "postcss": "^8.1.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gatsby-plugin-react-helmet": "^3.5.0",
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^2.0.1"
   }
 }

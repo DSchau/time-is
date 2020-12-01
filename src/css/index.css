@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+html, body, #___gatsby {
+  min-height: 100%;
+  height: 100%;
+}
+
+#___gatsby > div {
+  @apply flex;
+  @apply min-h-full;
+  @apply items-center;
+  @apply justify-center;
+}
