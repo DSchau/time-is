@@ -1,4 +1,4 @@
-name: UpdateResults
+name: Publish
 on:
   schedule:
     - cron: "* * * * *" # every minute, y'all
