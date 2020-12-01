@@ -7,15 +7,15 @@ import Time from '../components/time'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <Time>{data.site.buildTime}</Time>
+      <Time>{data.time.now}</Time>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      buildTime(formatString:"HH:MM")
+    time {
+      now(formatString:"kk:mm")
     }
   }
 `
