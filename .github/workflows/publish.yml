@@ -1,0 +1,12 @@
+name: UpdateResults
+on:
+  schedule:
+    - cron: "* * * * *" # every minute, y'all
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-build
+        env:
+          BUILD_HOOK_URL: ${{ secrets.BUILD_HOOK_URL }}
+        run: curl -L -X POST "${BUILD_HOOK_URL}" -d "{}" 
