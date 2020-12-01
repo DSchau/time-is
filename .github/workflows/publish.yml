@@ -1,7 +1,7 @@
 name: Publish
 on:
   schedule:
-    - cron: "* * * * *" # every day at midnight PST
+    - cron: "* * * * *" # every minute
 jobs:
   curl:
     runs-on: ubuntu-latest
