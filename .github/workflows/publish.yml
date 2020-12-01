@@ -1,7 +1,9 @@
 name: Publish
 on:
   schedule:
-    - cron: "* * * * *" # every minute
+    # https://github.blog/changelog/2019-11-01-github-actions-scheduled-jobs-maximum-frequency-is-changing/
+    # well this is bullshit GitHub
+    - cron: "* * * * *" # every minute (5 minutes because GitHub)
 jobs:
   curl:
     runs-on: ubuntu-latest
