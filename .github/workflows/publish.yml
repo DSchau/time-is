@@ -1,12 +1,12 @@
 name: Publish
 on:
   schedule:
-    - cron: "*/1 * * * *" # every minute, y'all
+    - cron: "* * * * *" # every day at midnight PST
 jobs:
   curl:
     runs-on: ubuntu-latest
     steps:
-      - name: Re-build
+      - name: Trigger Gatsby Cloud
         env:
           BUILD_HOOK_URL: ${{ secrets.BUILD_HOOK_URL }}
-        run: curl -L -X POST "${BUILD_HOOK_URL}" -d "{}" 
+        run: curl -L -X POST "${BUILD_HOOK_URL}" -d "{}"
